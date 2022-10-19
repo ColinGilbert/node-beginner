@@ -212,6 +212,10 @@
             <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
               <span class="carousel-control-next-icon"></span>
             </a>
+            <div class="btn-group" id="carouselButton">
+              <button class="btn btn-danger btn-small" id="carousel-pause"><span class="fa fa-pause"></span></button>
+              <button class="btn btn-danger btn-small" id="carousel-play"><span class="fa fa-play"></span></button>
+            </div>
           </div>
         </div>
       </div>
@@ -274,17 +278,6 @@
           </div>
         </div>
       </div>
-      <a id="reservation"></a>
-      <div class="row row-content">
-        <div class="card offset-2">
-          <div class="card-header text-white bg-warning pt-3 pb-1">
-            <h2><strong>Reserve a Table</strong></h2>
-          </div>
-          <div class="card-body">
-
-          </div>
-        </div>
-      </div>
     </div>
 
 
@@ -332,7 +325,17 @@
         </div>
       </div>
     </footer>
-
+    <script>
+      $(document).ready(function() {
+        $('#mycarousel').carousel({interval: 2000});
+        $("#carousel-pause").click(function() {
+            $('#mycarousel').carousel("pause");
+        });
+        $("#carousel-play").click(function() {
+            $('#mycarousel').carousel("cycle");
+        });
+      });
+    </script>
   </body>
 
 </html>

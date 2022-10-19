@@ -64,3 +64,9 @@ body {
   top: 50px;
   font-weight: bold;
 }
+
+#carouselButton {
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+}
